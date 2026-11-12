@@ -2,6 +2,8 @@
 
 Laboratorio in italiano per una quinta di telecomunicazioni: ipotesi sul carico, IPv4, CIDR, VLSM e VLAN. Frontend statico HTML/CSS/JavaScript senza framework, build o dipendenze esterne. Hosting previsto: GitHub Pages. Raccolta verifiche: Supabase (piano Free).
 
+Layout aggiornato il 12 novembre 2026: tema blu notte con accenti ciano e lime, schema di rete SVG animato, navigazione con pagina corrente evidenziata, schede attività e moduli adattati a desktop e smartphone. `modern.css` definisce il nuovo tema sopra gli stili di base; `ui.js` contiene la home e la navigazione. Motore didattico e database conservano la versione precedente. Le animazioni rispettano la preferenza di riduzione del movimento.
+
 ## Stato della consegna
 
 Il laboratorio è configurato per il progetto Supabase ReteLab nella regione UE Francoforte. `config.js` contiene solo l’URL API e una chiave pubblica publishable. Schema e permessi sono installati; il test transazionale `tests/backend-smoke.sql` ha verificato sul server RLS, accesso docente, PIN, ripresa, bozze, scadenza, immutabilità della consegna e cancellazione. Tutti i dati di quel test sono stati annullati con ROLLBACK.
@@ -56,7 +58,7 @@ Il piano gratuito può mettere in pausa progetti poco attivi: verificare lo stat
 ## Pubblicare gratis su GitHub Pages
 
 1. Creare un account su https://github.com. Creare un repository **pubblico** chiamato, per esempio, `rete-lab`. GitHub Pages è disponibile per repository pubblici con GitHub Free.
-2. Da **Add file → Upload files**, caricare il contenuto di questa cartella **direttamente nella radice del repository**: `index.html`, `style.css`, `engine.js`, `app.js`, `config.js` e `.nojekyll`. Per pubblicare basta questo gruppo di file. Si possono caricare anche README, test, server e schema SQL perché non contengono dati o segreti.
+2. Da **Add file → Upload files**, caricare il contenuto di questa cartella **direttamente nella radice del repository**: `index.html`, `style.css`, `modern.css`, `ui.js`, `engine.js`, `app.js`, `config.js` e `.nojekyll`. Per pubblicare basta questo gruppo di file. Si possono caricare anche README, test, server e schema SQL perché non contengono dati o segreti.
 3. Non caricare la cartella `Materiali`, dati reali degli studenti, esportazioni delle verifiche, PIN, password o file con credenziali.
 4. In **Settings → Pages**, scegliere **Deploy from a branch**, branch `main`, cartella `/ (root)`, poi **Save**.
 5. Attendere il deploy. L’URL sarà `https://NOME-UTENTE.github.io/rete-lab/`. Non è un URL già attivato: dipende dal proprio account.
